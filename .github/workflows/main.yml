@@ -10,5 +10,6 @@ jobs:
       - shell: bash
         env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+          TEST_ENV: 123
         run: |
-          echo "$LARGE_SECRET_PASSPHRASE"
+         echo "Hello $TEST_ENV! $LARGE_SECRET_PASSPHRASE"
