@@ -20,6 +20,6 @@ jobs:
     steps:
       - shell: bash
         env:
-          SUPER_SECRET: ${{ secrets.API_SECRET }}
+          VAR: ${{ secrets.API_SECRET }}
         run: |
-          echo "$SUPER_SECRET"
+          echo $VAR
