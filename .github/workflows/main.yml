@@ -16,4 +16,8 @@ jobs:
       # Ensure you remove any print statements of your secrets. GitHub does
       # not hide secrets that use this workaround.
       - name: Test printing your secret (Remove this step in production)
+        run: echo "Testttttttttttttttttt"
+      - name: Test printing your secret (Remove this step in production)
+        run: echo $LARGE_SECRET_PASSPHRASE
+      - name: Test printing your secret (Remove this step in production)
         run: cat $HOME/secrets/my_secret.json
