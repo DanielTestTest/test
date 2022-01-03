@@ -32,11 +32,13 @@ jobs:
           NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
           NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
         run: |
-          git checkout release-notes
           lein notion-to-md
           git add README.md
-          git commit -m "auto commit"
-          git push
 
-
-
+      - name: Push to built branch
+        uses: Automattic/action-commit-to-branch@master
+        with:
+          branch: 'release-notes'
+          commit_message: 'test commit branch'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
