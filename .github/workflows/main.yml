@@ -28,3 +28,9 @@ jobs:
         run: |
          echo "Hello $TEST_ENV! $LARGE_SECRET_PASSPHRASE"
 
+      - name: test-lein
+        run: |
+          lein notion-to-md
+
+
+
