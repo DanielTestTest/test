@@ -32,7 +32,11 @@ jobs:
           NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
           NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
         run: |
+          git checkout release-notes
           lein notion-to-md
+          git add README.md
+          git commit -m "auto commit"
+          git push
 
 
 
