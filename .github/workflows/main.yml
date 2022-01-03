@@ -7,9 +7,24 @@ jobs:
     name: My Job
     runs-on: ubuntu-latest
     steps:
-      - shell: bash
+      - uses: actions/checkout@v2
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'zulu'
+
+      - name: Setup Clojure
+        uses: DeLaGuardo/setup-clojure@3.4
+        with:
+          lein: 2.9.1
+
+      - name: Test vars
+        shell: bash
         env:
           LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
           TEST_ENV: 123
         run: |
          echo "Hello $TEST_ENV! $LARGE_SECRET_PASSPHRASE"
+
