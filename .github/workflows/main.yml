@@ -21,6 +21,9 @@ jobs:
           lein: 2.9.1
 
       - name: test-lein
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        with:
+          branch: 'release-notes'
         env:
           NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
           NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
