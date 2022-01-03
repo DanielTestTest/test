@@ -33,7 +33,6 @@ jobs:
           NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
         run: |
           lein notion-to-md
-          git add README.md docs/
 
       - name: Push to built branch
         uses: Automattic/action-commit-to-branch@master
