@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          branch: 'release-notes'
+          branch: 'documentation/update-readme'
 
       - name: test-lein
         env:
@@ -38,7 +38,7 @@ jobs:
       - name: Push to built branch
         uses: Automattic/action-commit-to-branch@master
         with:
-          branch: 'release-notes'
-          commit_message: 'test commit branch'
+          branch: 'documentation/update-readme'
+          commit_message: 'Imported README from Notion'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
