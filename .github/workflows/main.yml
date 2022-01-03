@@ -20,15 +20,10 @@ jobs:
         with:
           lein: 2.9.1
 
-      - name: Test vars
-        shell: bash
-        env:
-          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
-          TEST_ENV: 123
-        run: |
-         echo "Hello $TEST_ENV! $LARGE_SECRET_PASSPHRASE"
-
       - name: test-lein
+        env:
+          NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
+          NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
         run: |
           lein notion-to-md
 
