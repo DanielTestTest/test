@@ -27,14 +27,14 @@ jobs:
         with:
           branch: 'documentation/update-readme'
 
-      - name: test-lein
+      - name: notion-to-md
         env:
           NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
           NOTION_API_SECRET: ${{ secrets.NOTION_API_SECRET }}
         run: |
           lein notion-to-md
 
-      - name: Push to built branch
+      - name: push to built branch
         uses: Automattic/action-commit-to-branch@master
         with:
           branch: 'documentation/update-readme'
@@ -46,7 +46,7 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           source_branch: "documentation/update-readme"        
-          destination_branch: "master"                      # If blank, default: master
-          pr_title: "Pulling ${{ github.ref }} into master" # Title of pull request
-          pr_body: ":crown: *An automated PR*"              # Full markdown support, requires pr_title to be set
+          destination_branch: "master"                  
+          pr_title: "Update README (imported from notion)"
+          pr_body: ":crown: *Automated PR via github actions*"
           github_token: ${{ secrets.GITHUB_TOKEN }}
