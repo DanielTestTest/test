@@ -1,4 +1,4 @@
-name: Workflows with large secrets
+name: update-readme workflow
 
 on: workflow_dispatch
 
