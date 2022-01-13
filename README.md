@@ -1,24 +1,7 @@
-# notion-to-md Readme
-
-> notion-to-md is a tool to import Notion pages to a Markdown format. It creates the Readme files that can be committed to you preferred git repository.
-
+![embedded image external](https://img.shields.io/clojars/v/com.flexiana/notion-to-md)
+![internal picture.png](docs/readme/internal%20picture.png)
 
 
-[https://img.shields.io/github/license/Flexiana/notion-to-md](https://img.shields.io/github/license/Flexiana/notion-to-md)
-
-
-
-[bookmark](https://img.shields.io/github/license/Flexiana/notion-to-md)
-
-
-
-![embeeeeed](https://img.shields.io/github/license/Flexiana/notion-to-md)
-![um link embedded](https://img.shields.io/github/license/Flexiana/notion-to-md)
-![icon and owther](https://img.shields.io/github/license/Flexiana/notion-to-md)
-
-## Cncepts
-
-![dinooooos](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f326275f-b07f-41cd-a145-a36d708cd591/Clipart_Dinossauro_II-Nilmara_Quintela_Paper_Designer-1-.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220113%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220113T135719Z&X-Amz-Expires=3600&X-Amz-Signature=c940b0ce45099bda1452e294bef1bf7073961aa8bcc31a20639694cb8e3971de&X-Amz-SignedHeaders=host&x-id=GetObject)
 The Notion API requires a page-id and a notion-secret to provide the page’s content: [Notion - The all-in-one workspace for your notes, tasks, wikis, and databases.](https://www.notion.so/)
 
 Examples:
